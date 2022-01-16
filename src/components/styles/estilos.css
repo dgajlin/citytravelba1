@@ -19,21 +19,28 @@ body {
 	top: 0;
     z-index: 40;
     background-image: linear-gradient(to bottom, #F70759, #ff2e74, #fc4884); 
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .headercols {
     display: flex;
     width: 100%;
+    box-sizing: border-box;
 } 
 
 .contlogo {
-    width: 40%;
+    width: 35%;
     padding-top: 35px;
 }
 
 .contmenu {
-    width: 60%;
+    width: 52%;
+}
+
+.contcarrito {
+    width: 13%;
+    height: 110px;
+    display: flex;    
 }
 
 label.logo {
@@ -42,4 +49,35 @@ label.logo {
     color: white;
     line-height: 40px;
     padding: 35px 40px;    
+}
+
+.imagen {
+    width: 25%;
+}
+
+.items {
+    width: 40%;
+    padding-top: 45px;
+}
+
+.imgCarrito {
+    padding-top: 35px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+  
+.cantdestinos {
+    font-size: 21px;
+    font-weight: bolder;
+    color: #2a536d;
+    padding-left: 19px;
+    padding-top: 45px;
+}
+  
+.lbldestinos {
+    font-size: 21px;
+    font-weight: bolder;
+    color: #2a536d;
+    padding-top: 45px;
 }

@@ -18,7 +18,7 @@ ul li a {
     text-decoration: none;    
 }
 
-a.active, nav a:hover {
+a.active, a:hover {
     background: #d3074c;
     color: white;
     text-decoration: none;
