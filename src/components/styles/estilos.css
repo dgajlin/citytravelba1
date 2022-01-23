@@ -11,6 +11,12 @@ body {
     padding: 110px 0 0 0;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+   height: 20px;
+}
+
 .header {
     position: fixed;
     width: 100%;
@@ -66,7 +72,7 @@ label.logo {
     height: 45px;
     cursor: pointer;
 }
-  
+
 .cantdestinos {
     font-size: 21px;
     font-weight: bolder;
@@ -80,4 +86,70 @@ label.logo {
     font-weight: bolder;
     color: #2a536d;
     padding-top: 45px;
+}
+
+.frmpasajeros {
+    padding-left: 65px;
+}
+
+.pasajeros {
+    width: 50px;
+    height: 20px;
+}
+
+.row {
+    display:flex;
+}
+
+.mainDestinos {
+    text-align: center;
+}
+
+.filaIndex {
+    padding-top: 40px;
+}
+
+.nombreDestino {
+    font-family:'Trebuchet MS';
+    font-weight: bolder;
+    text-align: center;
+}
+
+.fotoDestino {
+    text-align: center;
+}
+
+.descDestino {
+    padding: 4% 10%;
+}
+
+.botonDestino {
+    text-align: center; 
+    padding-bottom: 6%;
+}
+
+.btnAgregar {
+    background-color: #C25E30;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1rem; 
+}
+
+.imagenDestino {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.lblPasajeros {
+    font-size: 14px;
+    color: #2a536d;
+    padding-top: 45px;
+}
+
+.itemPasajeros {
+    width: 40px;
+    text-align: center;
+    font-weight: bolder;
 }
