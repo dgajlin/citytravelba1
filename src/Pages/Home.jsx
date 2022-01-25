@@ -1,10 +1,35 @@
 import { dataF1 } from "../components/DestDataF1";
 import { dataF2 } from "../components/DestDataF2";
-import Destino from "../components/Destino";
+import ItemList from "../components/ItemList";
 import ItemCount from "../components/ItemCount";
 import Header from "../components/Header";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [destinos,setDestinos] = useState([]);
+
+  useEffect(() => {
+      let isok = true;
+      let mostrarInfo = (dataF1) => {
+        return dataF1;
+      }
+      let consultaInfo = (time, task) => {
+        return new Promise((resolve, reject) => {
+          if (isok) {
+            setTimeout(() => {
+              resolve(task)
+            }, time);
+          } 
+          else {
+            reject("Error")
+          }
+        });
+      }
+      consultaInfo(2000, mostrarInfo(dataF1))
+        .then(respuesta => setDestinos(respuesta))
+        .catch(err => console.log("error", err))
+  },[destinos])
+
   return (
     <>
       <Header />
@@ -16,11 +41,13 @@ const Home = () => {
 
       <div className="row filaIndex">  
       {            
-          dataF1.map((destino) =>
+          destinos.map((destino) =>
             <div className="col-md-4 mainDestinos">
-              <Destino key={destino.id}
+              <ItemList key={destino.id}
                        title={destino.title}
-                       thumbnail={destino.thumbnail}                   
+                       thumbnail={destino.thumbnail}
+                       descripcion={destino.descripcion}
+                       precio={destino.precio}
               />
             </div>
           )
@@ -31,9 +58,11 @@ const Home = () => {
       {            
           dataF2.map((destino) =>
             <div className="col-md-4 mainDestinos">
-                <Destino key={destino.id}
+                <ItemList key={destino.id}
                          title={destino.title}
-                         thumbnail={destino.thumbnail}                   
+                         thumbnail={destino.thumbnail}   
+                         descripcion={destino.descripcion}
+                         precio={destino.precio}                
                 />
             </div>
           )
