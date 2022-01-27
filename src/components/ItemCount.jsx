@@ -16,10 +16,11 @@ const ItemCount = (props) => {
     return (
         <>
             <div className="frmpasajeros">
-                <label className="lblPasajeros">Pasajeros:</label><br />
+                <label className="lblPasajeros">Cantidad de Pasajeros:</label><br />
                 <button type="button" onClick={PassengerSub} className="itemPasajeros">-</button>
                 <input type="text" value={cantpasajeros} className="itemPasajeros" />
-                <button type="button" onClick={PassengerAdd} className="itemPasajeros">+</button>
+                <button type="button" onClick={PassengerAdd} className="itemPasajeros">+</button>                
+                <button type="button" className="btnAddCarrito">Agregar al Carrito</button>
             </div>
         </>
     );

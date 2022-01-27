@@ -89,12 +89,24 @@ label.logo {
 }
 
 .frmpasajeros {
-    padding-left: 65px;
+    text-align: center;
+    border:#2a536d 1px solid;
+    border-radius: 5px;
+    width: 280px;
+    padding: 5px 0 15px 0;
+    margin: 0 23%;
 }
 
 .pasajeros {
     width: 50px;
     height: 20px;
+}
+
+.btnAddCarrito {    
+    width: 130px;
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
 }
 
 .row {
@@ -115,12 +127,33 @@ label.logo {
     text-align: center;
 }
 
+.nombreDestinoDetail {
+    font-family:'Trebuchet MS';
+    font-weight: bolder;
+    text-align: center;
+    padding: 20px 0;
+}
+
 .fotoDestino {
     text-align: center;
 }
 
 .descDestino {
     padding: 4% 10%;
+}
+
+.descDestinoDetail {
+    padding: 2% 31%;
+    font-size: 14px
+}
+
+.costoDetail {
+    padding: 0% 31%;
+    font-size: 12px;
+}
+
+.disponibilidadDetail {
+    padding: 3% 31%;    
 }
 
 .botonDestino {
@@ -142,14 +175,20 @@ label.logo {
     border-radius: 10px;
 }
 
+.imagenDestinoDetail {
+    width: 35%;
+    border-radius: 10px;
+}
+
 .lblPasajeros {
-    font-size: 14px;
+    font-size: 13px;
     color: #2a536d;
     padding-top: 45px;
 }
 
 .itemPasajeros {
-    width: 40px;
+    width: 30px;
+    margin-top: 8px;
     text-align: center;
-    font-weight: bolder;
+    font-weight: bolder;        
 }
