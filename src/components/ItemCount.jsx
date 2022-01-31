@@ -1,13 +1,16 @@
+// Contador de Pasajeros que contratan la excursion hacia el Destino turistico
 import React, {useState} from "react";
 
 const ItemCount = (props) => {
     const [cantpasajeros,setCantpasajeros] = useState(parseInt(props.inicial));
 
+    // Funcion incrementar pasajero
     const PassengerAdd = () => {  
         if (cantpasajeros < parseInt(props.maximo)) 
             setCantpasajeros(cantpasajeros+1);
     }
     
+    // Funcion decrementar pasajero
     const PassengerSub = () => {        
         if (cantpasajeros > parseInt(props.inicial))
             setCantpasajeros(cantpasajeros-1);

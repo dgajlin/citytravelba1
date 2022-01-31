@@ -1,15 +1,21 @@
-import { dataF1 } from "./DestDataF1";
-import { dataF2 } from "./DestDataF2";
+// Contenedor del listado de Destinos comercializables
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { paquete } from "./Paquetes";
 
 const ItemListContainer = () => {
     const [destinos,setDestinos] = useState([]);
+    const urlParam = useParams();
 
     useEffect(() => {
         let isok = true;
-        let mostrarInfo = (dataF1) => {
-            return dataF1;
+        let mostrarInfo = (paquete) => {
+            // Si no se filtro por categoria devuelvo todos los paquetes turisticos
+            if (urlParam.categoria) 
+                return paquete.filter(paquete => paquete.categoria === parseInt(urlParam.categoria))
+            else
+                return paquete;
         }
         let consultaInfo = (time, task) => {
             return new Promise((resolve, reject) => {
@@ -23,18 +29,20 @@ const ItemListContainer = () => {
                 }
             });
         }
-        consultaInfo(2000, mostrarInfo(dataF1))
+        consultaInfo(2000, mostrarInfo(paquete))
         .then(respuesta => setDestinos(respuesta))
         .catch(err => console.log("error", err))
-  },[destinos])
+  },[urlParam.categoria])
 
   return (
     <>
-        <div className="row filaIndex">  
-            {                                
+        <div className="contenedor">  
+            {       
+                // Muestro los paquetes turisticos                         
                 destinos.map((destino) =>
-                    <div className="col-md-4 mainDestinos">
+                    <div className="mainDestinos">
                         <ItemList key={destino.id}
+                                  id={destino.id}
                                   title={destino.title}
                                   thumbnail={destino.thumbnail}
                                   descripcion={destino.descripcion}
@@ -44,21 +52,6 @@ const ItemListContainer = () => {
                 )
             }
         </div>
-
-        <div className="row filaIndex">  
-            {            
-                dataF2.map((destino) =>
-                    <div className="col-md-4 mainDestinos">
-                        <ItemList key={destino.id}
-                                  title={destino.title}
-                                  thumbnail={destino.thumbnail}   
-                                  descripcion={destino.descripcion}
-                                  precio={destino.precio}                
-                        />
-                    </div>
-                )
-            }
-        </div>      
     </>
   );
 }

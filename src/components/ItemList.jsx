@@ -1,4 +1,6 @@
+// Listado de Destinos comecializables
 import Item from "./Item";
+import { Link } from "react-router-dom";
 
 const ItemList = (props) => {
     return (
@@ -11,7 +13,7 @@ const ItemList = (props) => {
                 <Item descripcion={props.descripcion} />
             </div>
             <div className="botonDestino"> 
-                <button type="button" className="btnAgregar">Agregar</button>
+                <Link to={`/item/${props.id}`}><button type="button" className="btnAgregar">Agregar</button></Link>
             </div>
         </>
     );

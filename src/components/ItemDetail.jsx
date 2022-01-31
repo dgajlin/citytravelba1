@@ -1,4 +1,4 @@
-import Item from "./Item";
+// Detalle del Destino
 import ItemCount from "../components/ItemCount";
 
 const ItemDetail = (props) => {
@@ -9,14 +9,17 @@ const ItemDetail = (props) => {
                 <img src={props.thumbnail} alt={props.title} className="imagenDestinoDetail" />
             </div>
             <div className="descDestinoDetail">
-                <Item descripcion={props.descripcion} />
+                <p>
+                    {props.descripcion}
+                </p>
             </div>
             <div className="costoDetail">
                 <p>
+                    Salimos el: {props.fecha}<br/><br/>
                     Costo: ${props.costo}/pasajero<br/>
                     Disponibilidad: {props.stock} pasajeros
                 </p>
-            </div>            
+            </div>
             <div className="disponibilidadDetail">
                 <ItemCount inicial="1" 
                     maximo="20" 

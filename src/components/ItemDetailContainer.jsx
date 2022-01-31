@@ -1,9 +1,11 @@
-import { dataF1 } from "./DestDataF1";
+import { paquete } from "./Paquetes";
 import ItemDetail from "../components/ItemDetail";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const [destinos, setDestinos] = useState({});
+    const urlParam = useParams();
 
     useEffect(() => {
         let isok = true;
@@ -19,15 +21,16 @@ const ItemDetailContainer = () => {
                 }
             });
         }
-        getItem(2000, dataF1[2])
+        getItem(2000, paquete.find((item) => item.id === parseInt(urlParam.id)))
             .then(result => setDestinos(result))
             .catch(err => console.log("error", err))
-    },[]);
+    },[urlParam]);
 
     return (
         <>
             <ItemDetail descripcion={destinos.descripcion}
-                        title={destinos.title} 
+                        title={destinos.title}
+                        fecha={destinos.fecha}
                         thumbnail={destinos.thumbnail} 
                         costo={destinos.costo}
                         stock={destinos.stock}

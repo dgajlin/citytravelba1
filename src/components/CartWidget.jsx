@@ -1,3 +1,4 @@
+// Carrito de Compras
 import Carrito from "./images/carrito.jpg";
 
 let cantitems = 4;

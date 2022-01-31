@@ -1,3 +1,5 @@
+// Menu de Navegacion por Categorias
+import { Link } from "react-router-dom";
 import "./styles/menu.css";
 
 const NavBar = () => {
@@ -5,9 +7,8 @@ const NavBar = () => {
         <>
             <div className="contmenu">
                 <ul>
-                    <li><a className="active" href="#">Inicio</a></li>
-                    <li><a href="#">Historia</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><Link to="/category/0">CAPITAL FEDERAL</Link></li>
+                    <li><Link to="/category/1">BUENOS AIRES (PBA)</Link></li>
                 </ul>
             </div>                
         </>
