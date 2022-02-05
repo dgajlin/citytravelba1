@@ -38,8 +38,9 @@ const ItemListContainer = () => {
     <>
         <div className="contenedor">  
             {       
-                // Muestro los paquetes turisticos                         
-                destinos.map((destino) =>
+                destinos.length > 0
+                ? destinos.map((destino) =>
+                    // Muestro los paquetes turisticos     
                     <div className="mainDestinos">
                         <ItemList key={destino.id}
                                   id={destino.id}
@@ -50,6 +51,7 @@ const ItemListContainer = () => {
                         />
                     </div>
                 )
+                : <p>&nbsp;Espere un momento por favor...</p>
             }
         </div>
     </>

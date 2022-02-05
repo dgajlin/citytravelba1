@@ -1,4 +1,4 @@
-// Carrito de Compras
+// Contenedor del Carrito de Compras
 import Carrito from "./images/carrito.jpg";
 
 let cantitems = 4;
@@ -19,4 +19,4 @@ const CartWidget = () => {
     );
 }
 
-export default CartWidget; 
+export default CartWidget;

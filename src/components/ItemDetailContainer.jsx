@@ -1,3 +1,4 @@
+// Contenedor del Detalle del Destino turistico seleccionado 
 import { paquete } from "./Paquetes";
 import ItemDetail from "../components/ItemDetail";
 import { useEffect, useState } from "react";

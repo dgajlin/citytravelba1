@@ -90,13 +90,13 @@ export const paquete = [
       stock: 7
     },
     {
-      id: 9,
+      id: 10,
       title: "Planetario Galileo Galilei",
       fecha: "19/02/2021",
       thumbnail: require("./images/planetario.jpg"),
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 0,
       costo: 1800,
-      stock: 17
+      stock: 0
     }    
   ];
