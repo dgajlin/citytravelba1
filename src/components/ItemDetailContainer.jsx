@@ -29,7 +29,8 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <ItemDetail descripcion={destinos.descripcion}
+            <ItemDetail id={destinos.id}
+                        descripcion={destinos.descripcion}
                         title={destinos.title}
                         fecha={destinos.fecha}
                         thumbnail={destinos.thumbnail} 

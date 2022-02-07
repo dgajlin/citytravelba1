@@ -7,7 +7,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 0,
       costo: 7250,
-      stock: 20
+      stock: 20,
+      cantidad: 0
     },
     {
       id: 2,
@@ -17,7 +18,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 1,
       costo: 6800,
-      stock: 10
+      stock: 10,
+      cantidad: 0
     },
     {
       id: 3,
@@ -27,7 +29,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 0,
       costo: 2400,
-      stock: 5
+      stock: 5,
+      cantidad: 0
     },
     {
       id: 4,
@@ -37,7 +40,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 0,
       costo: 4800,
-      stock: 30
+      stock: 30,
+      cantidad: 0
     },
     {
       id: 5,
@@ -47,7 +51,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 0,
       costo: 2900,
-      stock: 30
+      stock: 30,
+      cantidad: 0
     },
     {
       id: 6,
@@ -57,7 +62,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 1,
       costo: 2500,
-      stock: 20
+      stock: 20,
+      cantidad: 0
     },
     {
       id: 7,
@@ -67,7 +73,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 1,
       costo: 2100,
-      stock: 18
+      stock: 18,
+      cantidad: 0
     },
     {
       id: 8,
@@ -77,7 +84,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 1,
       costo: 2300,
-      stock: 12
+      stock: 12,
+      cantidad: 0
     },
     {
       id: 9,
@@ -87,7 +95,8 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 0,
       costo: 1800,
-      stock: 7
+      stock: 7,
+      cantidad: 0
     },
     {
       id: 10,
@@ -97,6 +106,7 @@ export const paquete = [
       descripcion: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
       categoria: 0,
       costo: 1800,
-      stock: 0
+      stock: 0,
+      cantidad: 0
     }    
   ];

@@ -1,14 +1,17 @@
 // Detalle del Destino turistico
 import ItemCount from "../components/ItemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../components/CartContext"
 
 const ItemDetail = (props) => {
     const [itemCount, setItemCount] = useState(0);
+    const elementos = useContext(CartContext);
 
     const onAdd = (cantpasajeros) => {
-        alert("Ha seleccionado " + cantpasajeros + " pasajeros");
+        //alert("Ha seleccionado " + cantpasajeros + " pasajeros");
         setItemCount(cantpasajeros);
+        elementos.addItem(props, cantpasajeros)        
     }
 
     return (
