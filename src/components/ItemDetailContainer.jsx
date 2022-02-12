@@ -1,31 +1,18 @@
 // Contenedor del Detalle del Destino turistico seleccionado 
-import { paquete } from "./Paquetes";
 import ItemDetail from "../components/ItemDetail";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import firestoreFetchDetail from "../utils/firebaseFetchDetail";
 
 const ItemDetailContainer = () => {
-    const [destinos, setDestinos] = useState({});
+    const [destinos,setDestinos] = useState({});
     const urlParam = useParams();
 
-    useEffect(() => {
-        let isok = true;
-        let getItem = (time, task) => {
-            return new Promise((resolve, reject) => {
-                if (isok) {
-                    setTimeout(() => {
-                        resolve(task)
-                    }, time);
-                } 
-                else {
-                    reject("Error")
-                }
-            });
-        }
-        getItem(2000, paquete.find((item) => item.id === parseInt(urlParam.id)))
-            .then(result => setDestinos(result))
-            .catch(err => console.log("error", err))
-    },[urlParam]);
+    useEffect(() => {       
+        firestoreFetchDetail(parseInt(urlParam.id))
+            .then((result) => setDestinos(result[0]))
+            .catch(error => console.log(error))        
+    },[urlParam.id])
 
     return (
         <>

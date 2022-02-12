@@ -58,7 +58,7 @@ const Cart = () => {
                     <label className="txtImpuestos">Descuentos: -${subtotal * 0.105}</label><br/><br/>
                     <label className="txtTotal">Total: ${subtotal + (subtotal * 0.105) - (subtotal * 0.105)} </label>
                     <div className="contContinuar">
-                        <Link to='/'><button type="button" className="btnContinuar">Continuar Comprando</button></Link>
+                        <Link to='/'><button type="button" className="btnContinuar">Seguir Comprando</button></Link>
                     </div>
                     <div className="contVaciar">
                         <button type="button" className="btnVaciar" onClick={elementos.clear}>Vaciar Carrito</button>
