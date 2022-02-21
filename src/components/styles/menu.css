@@ -1,0 +1,25 @@
+ul {  
+    margin-right: 20px;
+    padding-top: 15px;
+}
+
+ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;  
+}
+
+ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;    
+}
+
+a.active, a:hover {
+    background: #d3074c;
+    color: white;
+    text-decoration: none;
+}
