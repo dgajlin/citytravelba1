@@ -1,4 +1,3 @@
-
 # CityTravel BA, desarrollado para el Curso de React.Js correspondiente a Coderhouse por Dario Ajlin (comisión 23245)
 
 
@@ -16,7 +15,6 @@ Se realiza depuracion y optimizacion del codigo fuente para la entrega final del
 ## Comenzando 🚀
 
 _Deberás Forkear este proyecto si quieres tener una copia en tu propio repositorio de GitHub._
-
 _Si lo que deseas es tener una copia en tu computador local, debes bajarte el archivo ZIP._
 
 
@@ -50,4 +48,3 @@ Esta pagina web se encuentra realiza solo para fines del curso de React. La mism
 
 ---
 ⌨️ Desarrollado por [dgajlin] (https://github.com/dgajlin) 😊
-
