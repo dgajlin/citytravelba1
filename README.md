@@ -15,7 +15,9 @@ Se realiza depuración y optimización del código fuente para la entrega final 
 ## Comenzando 🚀
 
 _Deberás Forkear este proyecto si quieres tener una copia en tu propio repositorio de GitHub._
+
 _Si lo que deseas es tener una copia en tu computador local, debes bajarte el archivo ZIP._
+
 
 
 ## Deployment 📦
