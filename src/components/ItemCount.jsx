@@ -1,40 +1,40 @@
 // Contador de Pasajeros que contratan la excursion hacia el Destino turistico
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const ItemCount = ({maximo, inicial, onAdd}) => {
-    const [cantpasajeros,setCantpasajeros] = useState(parseInt(inicial));
+const ItemCount = ({stock, initial, onAdd}) => {
+    const [qty,setQty] = useState(parseInt(initial));
     
-    // Funcion incrementar pasajero
-    const PassengerAdd = () => {  
-        if (cantpasajeros < parseInt(maximo)) 
-            setCantpasajeros(cantpasajeros+1);
+    // Funcion incrementar pasajeros
+    const passengerAdd = () => {  
+        if (qty < parseInt(stock)) 
+            setQty(qty + 1);
     }
     
-    // Funcion decrementar pasajero
-    const PassengerSub = () => {        
-        if (cantpasajeros > parseInt(inicial+1))
-            setCantpasajeros(cantpasajeros-1);            
+    // Funcion decrementar pasajeros
+    const passengerSub = () => {        
+        if (qty > parseInt(initial + 1))
+            setQty(qty - 1);            
     }
 
     return (
         <>
-            <div className="frmpasajeros">
-                <label className="lblPasajeros">Cantidad de Pasajeros:</label><br />
+            <div className="frmpassengers">
+                <label className="lblpassengers">Cantidad de Pasajeros:</label><br />
                 {
-                    maximo > 0
-                    ? <button type="button" onClick={PassengerSub} className="itemPasajeros">-</button>
-                    : <button type="button" className="itemPasajeros" disabled>-</button>
+                    stock > 0
+                    ? <button type="button" onClick={passengerSub} className="itempassengers">-</button>
+                    : <button type="button" className="itempassengers" disabled>-</button>
                 }
-                <input type="text" value={cantpasajeros} className="itemPasajeros" />
+                <input type="text" value={qty} className="itempassengers" readOnly />
                 {
-                    maximo > 0
-                    ? <button type="button" onClick={PassengerAdd} className="itemPasajeros">+</button>
-                    : <button type="button" className="itemPasajeros" disabled>+</button>
+                    stock > 0
+                    ? <button type="button" onClick={passengerAdd} className="itempassengers">+</button>
+                    : <button type="button" className="itempassengers" disabled>+</button>
                 }
                 {
-                    cantpasajeros > 0
-                    ? <button type="button" className="btnAddCarrito" onClick={() => onAdd(cantpasajeros)}>Agregar al Carrito</button>
-                    : <button type="button" className="btnAddCarrito" disabled>Agregar al Carrito</button>
+                    qty > 0
+                    ? <button type="button" className="btnAddCart" onClick={() => onAdd(qty)}>Agregar al Carrito</button>
+                    : <button type="button" className="btnAddCart" disabled>Agregar al Carrito</button>
                 }
             </div>
         </>

@@ -7,13 +7,13 @@ const ItemList = (props) => {
         <>
             <h3 className="nombreDestino">{props.title}</h3>
             <div className="fotoDestino">
-                <img src={props.thumbnail} alt={props.title} className="imagenDestino" />
+                <img src={props.thumbnail} alt={props.title} className="imageDestino" />
             </div>
             <div className="descDestino">
-                <Item descripcion={props.descripcion} />
+                <Item description={props.description} />
             </div>
             <div className="botonDestino"> 
-                <Link to={`/item/${props.idItem}`}><button type="button" className="btnAgregar">Agregar</button></Link>
+                <Link to={`/item/${props.id}`}><button type="button" className="btnAdd">Agregar</button></Link>
             </div>
         </>
     );

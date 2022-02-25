@@ -43,7 +43,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 52%;
 }
 
-.contcarrito {
+.contcart {
     width: 13%;
     height: 110px;
     display: flex;    
@@ -63,7 +63,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: transparent;
 }
 
-.imagen {
+.image {
     width: 25%;
 }
 
@@ -94,21 +94,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding-top: 45px;
 }
 
-.frmpasajeros {
-    text-align: center;
-    border:#2a536d 1px solid;
-    border-radius: 5px;
-    width: 280px;
-    padding: 5px 0 15px 0;
-    margin: 0 23%;
-}
-
-.pasajeros {
-    width: 50px;
-    height: 20px;
-}
-
-.btnAddCarrito {  
+.btnAddCart {  
     background-color: #C25E30;
     color: #fff;
     width: 110px;
@@ -119,7 +105,7 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer; 
 }
 
-.btnAddCarrito:hover {
+.btnAddCart:hover {
     background: #d3074c;
     color: white;
     cursor: pointer;
@@ -141,7 +127,7 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-.btnVaciar {    
+.btnClear {    
     background-color: #C25E30;
     color: #fff;
     width: 150px;
@@ -151,13 +137,13 @@ input[type=number]::-webkit-outer-spin-button {
     text-decoration: none;
 }
 
-.btnVaciar:hover {    
+.btnClear:hover {    
     background: #d3074c;   
     color: white;
     cursor: pointer;
 }
 
-.btnContinuar {    
+.btnContinue {    
     background-color: #C25E30;
     color: #fff;
     width: 150px;
@@ -167,13 +153,13 @@ input[type=number]::-webkit-outer-spin-button {
     text-decoration: none;
 }
 
-.btnContinuar:hover {    
+.btnContinue:hover {    
     background: #d3074c;   
     color: white;
     cursor: pointer;
 }
 
-.btnComprar {    
+.btnBuy {    
     background-color: #C25E30;
     color: #fff;
     width: 150px;
@@ -183,7 +169,7 @@ input[type=number]::-webkit-outer-spin-button {
     text-decoration: none;
 }
 
-.btnComprar:hover {    
+.btnBuy:hover {    
     background: #d3074c;   
     color: white;
     cursor: pointer;
@@ -206,29 +192,45 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-.contenedor1 {
+.btnAdd {
+    background-color: #C25E30;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer; 
+}
+
+.btnAdd:hover {    
+    background: #d3074c;
+    color: white;
+    cursor: pointer;
+}
+
+.containerdest {
     width: 92%;
     overflow: hidden;
 }
 
-.columna1 {
+.column1 {
     width: 50%;
     float: left;
     padding-bottom: 30px;
     text-align: center;
 }
 
-.columna2 {
+.column2 {
     width: 40%;
     float: left;
 }
 
-.carritoVacio {
+.emptyCart {
     margin-top: 70px;
     margin-bottom: 30px;
 }
 
-.lblCarritoVacio {
+.lblEmptyCart {
     font-size: 18px;
     color:darkblue;
 }
@@ -256,7 +258,7 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 15px;
 }
 
-.txtImpuestos {
+.txtTaxes {
     font-size: 12px;
 }
 
@@ -265,17 +267,17 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: bolder;
 }
 
-.contContinuar,.contVaciar,.contTerminar {
+.contContinue,.contClear,.contFinish {
     margin: 15px 0;
 }
 
-.contVaciarCarrito {
+.contClearCart {
     width: 100%;
     text-align: center;
     padding-bottom: 40px;
 }
 
-.nombreDestinoCart {
+.nameDestinoCart {
     font-family: 'Trebuchet MS';
     font-weight: bolder;
     text-align: center;
@@ -283,7 +285,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding-bottom: 5px;
 }
 
-.costoCart {
+.priceCart {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     padding-top: 75px;
@@ -302,13 +304,13 @@ input[type=number]::-webkit-outer-spin-button {
     padding-bottom: 25px;
 }
 
-.nombreDestino {
+.nameDestino {
     font-family: 'Trebuchet MS';
     font-weight: bolder;
     text-align: center;
 }
 
-.nombreDestinoDetail {
+.nameDestinoDetail {
     font-family: 'Trebuchet MS';
     font-weight: bolder;
     text-align: center;
@@ -328,7 +330,7 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 14px
 }
 
-.costoDetail {
+.priceDetail {
     padding: 0% 31%;
     font-size: 12px;
 }
@@ -342,39 +344,37 @@ input[type=number]::-webkit-outer-spin-button {
     padding-bottom: 6%;
 }
 
-.btnAgregar {
-    background-color: #C25E30;
-    color: #fff;
-    width: 120px;
-    height: 30px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer; 
-}
-
-.btnAgregar:hover {    
-    background: #d3074c;
-    color: white;
-    cursor: pointer;
-}
-
-.imagenDestino {
+.imageDestino {
     width: 70%;
     border-radius: 10px;
 }
 
-.imagenDestinoDetail {
+.imageDestinoDetail {
     width: 35%;
     border-radius: 10px;
 }
 
-.lblPasajeros {
+.frmpassengers {
+    text-align: center;
+    border:#2a536d 1px solid;
+    border-radius: 5px;
+    width: 280px;
+    padding: 5px 0 15px 0;
+    margin: 0 23%;
+}
+
+.passengers {
+    width: 50px;
+    height: 20px;
+}
+
+.lblpassengers {
     font-size: 13px;
     color: #2a536d;
     padding-top: 45px;
 }
 
-.itemPasajeros {
+.itempassengers {
     width: 30px;
     margin-top: 8px;
     text-align: center;

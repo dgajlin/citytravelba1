@@ -1,29 +1,23 @@
 // Contenedor del Carrito de Compras
-import Carrito from "./images/carrito.jpg";
+import Carrito from "./images/cart.jpg";
 import { useContext } from 'react'
-import { CartContext } from "../components/CartContext"
+import { CartContext } from "../context/CartContext"
 import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-    const elementos = useContext(CartContext);
-
-    // Obtengo la cantidad de Items del carrito
-    let cantitems = 0;
-    elementos.cartList.map(items => (
-        cantitems += items.cantidad
-    ))
+    const elements = useContext(CartContext);
 
     return (
         <>
             {
-                cantitems > 0
+                elements.calcItemsQty() > 0
                 ?
-                <div className="contcarrito">
-                    <div className="imagen">
+                <div className="contcart">
+                    <div className="image">
                         <Link to='/cart' style={{background: 'transparent'}}><img alt="Carrito" src={Carrito} className="imgCarrito" /></Link>
                     </div>
                     <div className="items">
-                        <label className="cantdestinos" id="cantDestinos">{cantitems}</label>
+                        <label className="cantdestinos" id="cantDestinos">{elements.calcItemsQty()}</label>
                         <label className="lbldestinos">&nbsp;items</label>
                     </div>
                 </div>

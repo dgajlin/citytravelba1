@@ -9,22 +9,22 @@ const ItemDetailContainer = () => {
     const urlParam = useParams();
 
     useEffect(() => {       
-        firestoreFetchDetail(parseInt(urlParam.idItem))
+        firestoreFetchDetail(urlParam.id)
             .then((result) => setDestinos(result[0]))
             .catch(error => console.log(error))        
-    },[urlParam.idItem])
+    },[urlParam.id])
 
     return (
         <>
-            <ItemDetail key={destinos.idItem}
-                        idItem={destinos.idItem}
+            <ItemDetail key={destinos.id}
                         id={destinos.id}                        
-                        descripcion={destinos.descripcion}
+                        description={destinos.description}
                         title={destinos.title}
-                        fecha={destinos.fecha}
+                        date={destinos.date}
                         thumbnail={destinos.thumbnail} 
-                        costo={destinos.costo}
+                        price={destinos.price}
                         stock={destinos.stock}
+                        qty={destinos.qty}
             />
         </>
     );

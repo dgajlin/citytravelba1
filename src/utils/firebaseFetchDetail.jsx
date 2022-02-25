@@ -1,11 +1,11 @@
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "./firebaseConfig"
     
-const firestoreFetchDetail = async(valor) => {
-    const q = query(collection(db, "destinos"), where("idItem", "==", valor));
+const firestoreFetchDetail = async(value) => {
+    const q = query(collection(db, "destinos"), where("id", "==", value));
     const querySnapshot = await getDocs(q);
     const dataFromFirebase = querySnapshot.docs.map(item => ({
-        idItem: item.id,
+        id: item.id,
         ...item.data()
     }));
 

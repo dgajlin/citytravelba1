@@ -22,12 +22,12 @@ const ItemListContainer = () => {
                     ? destinos.map((destino) =>
                         // Muestro los paquetes turisticos     
                         <div className="mainDestinos">
-                            <ItemList key={destino.idItem}                                        
-                                      idItem={destino.idItem}
+                            <ItemList key={destino.id}                                        
+                                      id={destino.id}
                                       title={destino.title}
                                       thumbnail={destino.thumbnail}
-                                      descripcion={destino.descripcion}
-                                      costo={destino.costo}
+                                      description={destino.description}
+                                      price={destino.price}
                             />
                         </div>
                     )

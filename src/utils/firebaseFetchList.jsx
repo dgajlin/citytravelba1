@@ -1,15 +1,15 @@
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "./firebaseConfig"
     
-const firestoreFetchList = async(valor) => {
+const firestoreFetchList = async(value) => {
     let q = ""
-    if (valor !== 0 && valor !== 1) 
-         q = query(collection(db, "destinos"), where("categoria", "!=", -1))
+    if (value !== 0 && value !== 1) 
+         q = query(collection(db, "destinos"), where("category", "!=", -1))
     else
-         q = query(collection(db, "destinos"), where("categoria", "==", valor));
+         q = query(collection(db, "destinos"), where("category", "==", value));
     const querySnapshot = await getDocs(q);
     const dataFromFirebase = querySnapshot.docs.map(item => ({
-        idItem: item.idItem,
+        id: item.id,
         ...item.data()
     }));
 

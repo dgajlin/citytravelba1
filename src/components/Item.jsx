@@ -2,13 +2,13 @@
 const Item = (props) => {
     return (
         <>
-            <h3 className="nombreDestino">{props.title}</h3>
+            <h3 className="nameDestino">{props.title}</h3>
             <div className="fotoDestino">
-                <img src={props.thumbnail} alt={props.title} className="imagenDestinoDetail" />
+                <img src={props.thumbnail} alt={props.title} className="imageDestinoDetail" />
             </div>
             <div className="descDestino">
                 <p>
-                    {props.descripcion}
+                    {props.description}
                 </p>
             </div>
         </>

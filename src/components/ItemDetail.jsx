@@ -2,15 +2,15 @@
 import ItemCount from "../components/ItemCount";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../components/CartContext"
+import { CartContext } from "../context/CartContext";
 
 const ItemDetail = (item) => {
     const [itemCount, setItemCount] = useState(0);
-    const elementos = useContext(CartContext);
+    const elements = useContext(CartContext);
 
-    const onAdd = (cantpasajeros) => {
-        setItemCount(cantpasajeros);
-        elementos.addItem(item, cantpasajeros)        
+    const onAdd = (qty) => {
+        setItemCount(qty);
+        elements.addItem(item, qty)        
     }
 
     return (
@@ -19,26 +19,26 @@ const ItemDetail = (item) => {
                 item && item.thumbnail
                 ?
                 <div>
-                    <h3 className="nombreDestinoDetail">{item.title}</h3>
+                    <h3 className="nameDestinoDetail">{item.title}</h3>
                     <div className="fotoDestino">
-                        <img src={item.thumbnail} alt={item.title} className="imagenDestinoDetail" />
+                        <img src={item.thumbnail} alt={item.title} className="imageDestinoDetail" />
                     </div>
                     <div className="descDestinoDetail">
                         <p>
-                            {item.descripcion}
+                            {item.description}
                         </p>
                     </div>
-                    <div className="costoDetail">
+                    <div className="priceDetail">
                         <p>
-                            Salimos el: {item.fecha}<br/><br/>
-                            Costo: ${item.costo}/pasajero<br/>
+                            Salimos el: {item.date}<br/><br/>
+                            Costo: ${item.price}/pasajero<br/>
                             Disponibilidad: {item.stock} pasajeros
                         </p>
                     </div>
                     <div className="disponibilidadDetail">
                         {
                             itemCount === 0
-                                ? <ItemCount maximo={item.stock} inicial={0} onAdd={onAdd} />
+                                ? <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
                                 : <Link to='/cart'><button type="button" className="btnCheckout">Checkout</button></Link>
                         }
                     </div>
